@@ -1,0 +1,128 @@
+.scene-page {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: #0b0c0d;
+}
+
+.scene-canvas {
+  position: absolute !important;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.scene-canvas canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.scene-loader {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #0b0c0d;
+}
+
+.loader-ring {
+  width: 28px;
+  aspect-ratio: 1;
+  border: 2px solid rgb(255 255 255 / 20%);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.orientation-notice {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  color: #fff;
+  text-align: center;
+  background: #0b0c0d;
+}
+
+.orientation-icon {
+  display: grid;
+  width: 88px;
+  aspect-ratio: 1;
+  place-items: center;
+  margin-bottom: 8px;
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 50%;
+  background: #151718;
+}
+
+.orientation-phone {
+  position: relative;
+  width: 27px;
+  height: 46px;
+  border: 2px solid #9ff0d8;
+  border-radius: 6px;
+  animation: rotate-phone 1.8s ease-in-out infinite alternate;
+}
+
+.orientation-phone::after {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+  width: 4px;
+  height: 2px;
+  margin: auto;
+  border-radius: 2px;
+  background: #9ff0d8;
+  content: '';
+}
+
+.orientation-notice h1 {
+  margin: 0;
+  color: inherit;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.orientation-notice p {
+  max-width: 260px;
+  color: rgb(255 255 255 / 70%);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+  .orientation-notice {
+    display: flex;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-phone {
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loader-ring,
+  .orientation-phone {
+    animation: none;
+  }
+}
