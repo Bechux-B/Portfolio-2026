@@ -102,6 +102,35 @@
   line-height: 1.5;
 }
 
+.graphic-design-link {
+  position: absolute;
+  z-index: 4;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  left: 50%;
+  padding: 8px 14px;
+  transform: translateX(-50%);
+  border: 1px solid rgb(159 240 216 / 55%);
+  border-radius: 999px;
+  color: #9ff0d8;
+  background: rgb(11 12 13 / 80%);
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.graphic-design-link:hover,
+.graphic-design-link:focus-visible {
+  border-color: #9ff0d8;
+  background: rgb(159 240 216 / 12%);
+}
+
+.graphic-design-link:focus-visible {
+  outline: 2px solid #9ff0d8;
+  outline-offset: 3px;
+}
+
 @media (max-width: 767px) and (orientation: portrait) {
   .orientation-notice {
     display: flex;

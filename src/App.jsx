@@ -41,6 +41,9 @@ function App() {
         <h1 id="orientation-title">Rotate your phone</h1>
         <p>Turn your phone sideways to view the portfolio.</p>
       </section>
+      <a className="graphic-design-link" href={`${import.meta.env.BASE_URL}portfolio`}>
+        Graphic design
+      </a>
     </main>
   )
 }
