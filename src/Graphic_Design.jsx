@@ -244,7 +244,7 @@ function PortfolioPage() {
       </div>
 
       <header className="portfolio-header">
-        <a href="/" aria-label="Return to home">
+        <a href={import.meta.env.BASE_URL} aria-label="Return to home">
           HOME
         </a>
       </header>
