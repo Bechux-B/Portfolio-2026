@@ -249,6 +249,28 @@ function PortfolioPage() {
         </a>
       </header>
 
+      <section
+        className="graphic-design-notice"
+        role="status"
+        aria-labelledby="graphic-design-notice-title"
+      >
+        <h1 id="graphic-design-notice-title">
+          Uh oh, the digital gnomes are still digging here.
+        </h1>
+        <p>
+          To view a different version of the portfolio,{' '}
+          <a
+            href={`${import.meta.env.BASE_URL}BeatriseBidere_Portfolio_2026.pdf`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            click here
+          </a>
+          . To go back HOME,{' '}
+          <a href={import.meta.env.BASE_URL}>click here</a>.
+        </p>
+      </section>
+
       <section className="portfolio-hero" aria-labelledby="portfolio-title">
         <div className="portfolio-label" ref={labelRef}>
           <img className="portfolio-tape" src={tapeAsset} alt="" />
