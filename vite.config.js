@@ -3,6 +3,9 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: process.env.GITHUB_ACTIONS === 'true' ? '/Portfolio-2026/' : '/',
+  base: '/Portfolio-2026/',
   plugins: [react()],
+  build: {
+    outDir: 'docs',
+  },
 })
